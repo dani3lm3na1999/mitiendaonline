@@ -1,11 +1,6 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView
-from http import HttpResponse
 from .models import Producto
 from .forms import ProductoForm
-
-import threading
-import time
 
 # Create your views here.
 def hello_world(request):
