@@ -1,0 +1,22 @@
+.container{
+    margin-top: 4rem;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    box-shadow: 3px 3px 5px gray;
+}
+
+.card, input{
+    text-align: center;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: start;
+}

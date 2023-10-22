@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/productos.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-header">
+                    <h6><b>Nuevo Producto</b></h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"><i>Detalle del Producto</i></h4>
+                    {% include 'pages/form.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Existencias</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in productos %}
+                            <tr>
+                                <td scope="row">{{ producto.nombre }}</td>
+                                <td>{{ producto.precio }}</td>
+                                <td>{{ producto.existencias }}</td>
+                                <td>
+                                    <a class="btn btn-info" href="{% url 'editar_producto' producto.id %}"><i class="bi bi-pencil-square"></i></a> |
+                                    <a class="btn btn-danger" href="{% url 'eliminar_producto' producto.id%}"><i class="bi bi-file-earmark-x"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

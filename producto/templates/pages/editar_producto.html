@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %} Editar Producto {% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/editar_producto.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6><b>Editar Producto</b></h6>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><i>Detalle del Producto</i></h4>
+                        {% include 'pages/form.html' %}
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="btn btn-info" href="{% url 'productos' %}">Volver <i class="bi bi-backspace-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

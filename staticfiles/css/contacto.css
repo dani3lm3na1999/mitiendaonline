@@ -1,0 +1,19 @@
+.formulario-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    max-width: 20rem;
+}
+
+.card-header{
+    color: white;
+    background-color: orange !important;
+}
+
+.card-body{
+    background-color: rgb(254, 240, 215)!important;
+    font-size: 0.75rem;
+}

@@ -1,0 +1,36 @@
+.center-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    margin:  0 auto;
+    text-align: justify;
+    box-shadow: 3px 3px 5px rgb(215, 215, 215);
+}
+
+.center-div p{
+    font-size: 1.8rem;
+}
+
+.center-div .carousel-item{
+    min-height: 35rem;
+}
+
+.contenedor-texto{
+    padding: 5rem;
+}
+
+h1, h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #aeaeae; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    font-size: 1rem; /* Cambia el tamaño del texto según tus preferencias */
+    width: 5%;
+}

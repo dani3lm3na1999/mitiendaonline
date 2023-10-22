@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}
+<h1>Listado Productos</h1>
+<ul>
+    {% for producto in productos %}
+        <li>{{producto.nombre}} - {{producto.precio}} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

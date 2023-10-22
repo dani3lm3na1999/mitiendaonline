@@ -1,0 +1,19 @@
+<h1>Bienvenido, {{ nombre_usuario }}</h1>
+
+<p>Precio: {{ precio|currency }}</p>
+
+{% if usuario_autenticado %}
+    <p>Bienvenido, {{ usuario.nombre }}.</p>
+{% else %}
+    <p>Inicia sesión para continuar.</p>
+{% endif %}
+
+<ul>
+    {% for producto in lista_productos %}
+        <li>{{ producto.nombre }}</li>
+    {% endfor %}
+</ul>
+
+<div>
+    {% include "encabezado.html" %}
+</div>
